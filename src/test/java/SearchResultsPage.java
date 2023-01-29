@@ -12,7 +12,7 @@ import java.util.List;
 
 public class SearchResultsPage {
 
-    private final WebDriver driver;
+    private WebDriver driver;
 
     By resultsItemsInPage = By.cssSelector("span[data-component-type=\"s-search-results\"] div[data-asin^=B]");
 
@@ -34,9 +34,6 @@ public class SearchResultsPage {
     public String getItemLinkFromResults(int index) {
         new WebDriverWait(driver, 5).until(ExpectedConditions.numberOfElementsToBeMoreThan(resultsItemsInPage,0));
         List<WebElement> results = driver.findElements(resultsItemsInPage);
-        String itemURL = results.get(index).findElement(elementWithURL).getAttribute("href");
-        System.out.println(itemURL);
-
-       return itemURL;
+        return results.get(index).findElement(elementWithURL).getAttribute("href");
     }
 }

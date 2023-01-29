@@ -7,7 +7,6 @@ import java.net.MalformedURLException;
 import java.net.URL;
 public class BaseTest {
     public static RemoteWebDriver driver;
-
     @BeforeEach
      public void setup() throws MalformedURLException {
         MutableCapabilities caps = new MutableCapabilities();

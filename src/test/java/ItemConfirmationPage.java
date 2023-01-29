@@ -5,7 +5,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ItemConfirmationPage {
-    WebDriver driver;
+    private WebDriver driver;
 
     By itemAddedSuccess = By.cssSelector("#NATC_SMART_WAGON_CONF_MSG_SUCCESS");
     public ItemConfirmationPage(WebDriver driver) {

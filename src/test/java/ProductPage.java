@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
 
 public class ProductPage {
 
-    WebDriver driver;
+    private WebDriver driver;
     @FindBy(how = How.CSS, using = "input[id=add-to-cart-button]")
     WebElement addToCartButton;
 
